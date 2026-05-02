@@ -7,5 +7,4 @@ output/processed/*
 output/aggregates/*
 !output/processed/.gitkeep
 !output/aggregates/.gitkeep
-*.csv
 .env
