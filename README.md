@@ -1,111 +1,33 @@
-# 🏃‍♂️ Sistema de Narración y Coaching en Directo (5000m Atletismo)
+# 🏎️ Narrador de Carreras de Atletismo (Real-Time)
 
-Este proyecto implementa un sistema de análisis deportivo en tiempo real utilizando Big Data e Inteligencia Artificial Generativa. Simula una carrera de 5000m, procesando los tiempos de paso de los atletas, detectando roturas en el pelotón, y generando informes y comentarios en directo mediante un sistema multi-agente con LangGraph y RAG.
+Este proyecto simula y analiza eventos de carreras de atletismo en tiempo real utilizando una arquitectura de Big Data. Para asegurar la compatibilidad de todas las librerías (especialmente PySpark y LangChain), este proyecto ha sido desarrollado bajo un entorno específico de **Python 3.11.9** y **Java 11**, evitando así los errores de compilación comunes en versiones más recientes como la 3.13.
 
-## 🛠️ Tecnologías Utilizadas
-*   **Ingesta:** Apache Kafka
-*   **Procesamiento:** Apache Spark (Structured Streaming)
-*   **IA & Orquestación:** LangGraph, LangChain, OpenAI/Gemini (LLMs)
-*   **RAG:** ChromaDB (Vector Store)
-*   **Frontend:** Streamlit
+## 📥 Guía de Instalación Paso a Paso (Windows + Git Bash)
 
----
+**1. Instalación de Java (OpenJDK 11):** Apache Spark requiere Java 11. Abre Git Bash y ejecuta `winget install Microsoft.OpenJDK.11`. Tras la instalación, reinicia Git Bash y comprueba que funciona con `java -version`.
 
-## ⚙️ 1. Instalación y Configuración (Para Profesores/Evaluadores)
+**2. Instalación de Python 3.11.9:** Es fundamental para evitar el "infierno de dependencias". Ejecuta `winget install Python.Python.3.11`. Comprueba que está disponible con el comando `py -3.11 --version`.
 
-Siga estos pasos para levantar el proyecto en local de forma aislada:
+**3. Configuración del Entorno Virtual:** En la carpeta raíz del proyecto, ejecuta los siguientes comandos para limpiar y crear un entorno estable:
+`rm -rf venv` (borra intentos previos)
+`py -3.11 -m venv venv` (crea el entorno con la versión correcta)
+`source venv/Scripts/activate` (activa el entorno; verás el prefijo `(venv)` en la terminal).
 
-### 1.1. Dependencia Crítica: Java (Para Apache Spark)
-Dado que PySpark requiere la Máquina Virtual de Java (JVM) para funcionar, es obligatorio tener instalado Java (versión 8, 11 o 17).
-*   Comprobar si está instalado: Abra su terminal y ejecute `java -version`.
-*   Si no lo tiene, siga estas instrucciones según su sistema:
-    *   Windows (Opción fácil): Descargue el instalador `.msi` desde Adoptium (https://adoptium.net/temurin/releases/?version=11). ¡Importante! Durante la instalación, asegúrese de marcar la casilla "Set JAVA_HOME variable".
-    *   Windows (Vía terminal/Git Bash usando winget): Abra su terminal como administrador y ejecute `winget install Microsoft.OpenJDK.11`
-    *   Mac: Ejecute `brew install openjdk@11`
-    *   Linux: Ejecute `sudo apt install openjdk-11-jdk`
+**4. Instalación de Dependencias:** Con el entorno activado, actualiza las herramientas base e instala los requisitos evitando compilaciones locales de C++:
+`python -m pip install --upgrade pip setuptools wheel`
+`pip install -r requirements.txt --only-binary :all:`
 
-### 1.2. Entorno Virtual de Python (venv)
-Se recomienda encarecidamente utilizar el entorno virtual nativo de Python para no generar conflictos de librerías.
+**5. Configuración de Hadoop/Winutils:** Spark en Windows necesita un apoyo extra. Crea la carpeta `C:\hadoop\bin`, descarga el archivo `winutils.exe` de Hadoop 3.0.0 y colócalo dentro. Después, ejecuta en tu terminal:
+`export HADOOP_HOME="C:/hadoop"`
+`export PATH="$PATH:$HADOOP_HOME/bin"`
 
-1. Crear el entorno virtual:
-python -m venv venv
+## 🚀 Ejecución del Proyecto
 
-2. Activar el entorno:
-(Windows): .\venv\Scripts\activate
-(Mac/Linux): source venv/bin/activate
-
-3. Instalar dependencias:
-pip install -r requirements.txt
-
-### 1.3. Configurar Variables de Entorno
-Cree un archivo `.env` en la raíz del proyecto y añada sus claves de API para los modelos generativos:
-OPENAI_API_KEY="sk-tu-clave-aqui"
-
-### 1.4. Levantar Servicios (Kafka)
-Asegúrese de tener Docker Desktop iniciado y ejecute:
-docker-compose up -d
+Sigue este orden para poner en marcha la arquitectura:
+1. **Infraestructura:** Con Docker Desktop abierto, levanta Kafka con `docker-compose up -d`.
+2. **Generación:** Crea el dataset estático con `python src/generate_data.py`.
+3. **Producción:** Inicia el streaming de datos a Kafka con `python src/kafka_producer.py`.
+4. **Consumo:** Lanza el motor de Spark para procesar los eventos en tiempo real.
 
 ---
-
-## 🚀 2. Guía de Ejecución
-
-Para ver el sistema funcionando en directo, es necesario abrir 4 terminales distintas (asegúrese de tener el entorno virtual activado en todas ellas).
-
-*   Terminal 1 (Preparación e Indexación RAG):
-    Genera los datos sintéticos de la carrera y carga los documentos históricos en la base de datos vectorial.
-    python src/generate_data.py
-    python src/rag_pipeline.py
-
-*   Terminal 2 (Spark Streaming):
-    Arranca el motor de procesamiento analítico. Se quedará escuchando a Kafka.
-    python src/streaming_pipeline.py
-
-*   Terminal 3 (La Interfaz de Streamlit):
-    Arranca la aplicación web donde se visualizarán la carrera, los comentarios del narrador y los consejos del coach.
-    streamlit run src/app.py
-
-*   Terminal 4 (El Directo - Productor Kafka):
-    Inicia la simulación de la carrera, enviando los eventos segundo a segundo.
-    python src/kafka_producer.py
-
----
-
-## 🗄️ 3. Arquitectura de Datos (Base de Datos Local)
-
-El sistema utiliza SQLite como puente ultrarrápido y almacenamiento estructurado entre el procesamiento Big Data (Spark) y el cerebro de IA (LangGraph)[cite: 1]. Spark divide la información calculada en dos tablas principales:
-
-1.  tabla_eventos (El Teletipo de Noticias):
-    *   Almacena hitos puntuales en el tiempo. 
-    *   Columnas: timestamp, tipo_evento (ROTURA, PASO_PARCIAL), detalles.
-    *   Uso: Despierta al Agente Narrador para comentar el directo.
-2.  tabla_metricas (El Leaderboard):
-    *   Almacena el estado actual e histórico de cada corredor.
-    *   Columnas: atleta_id, posicion_actual, split_100m, velocidad_media, etc.
-    *   Uso: Usada por el Agente Coach para dar feedback, y por el Agente del Informe Final para tener la radiografía exacta de la carrera.
-
----
-
-## 🔄 4. Flujo del Sistema (Casos de Uso Prácticos)
-
-A continuación, se detalla qué hace cada componente cuando ocurren distintos escenarios en la carrera:
-
-Ejemplo A: Paso normal por el parcial de 1000m
-1.  Productor: Envía a Kafka que todos los corredores han pasado los 1000m.
-2.  Spark: Calcula la posición, ritmos y actualiza la tabla_metricas[cite: 1]. Al ver que todos han pasado, inserta un evento PASO_PARCIAL_1000M en la tabla_eventos.
-3.  LangGraph (Narrador): Lee el nuevo evento. Usa su Tool de BBDD para ver quién va primero en la tabla_metricas. Usa su Tool RAG para buscar el contexto táctico. Imprime: "¡Pasamos el primer kilómetro! El grupo se mantiene compacto..."
-
-Ejemplo B: Katir se queda rezagado (>5 segundos)
-1.  Productor: Envía el tiempo de Katir en los 3000m mucho más tarde que el líder.
-2.  Spark: Compara tiempos. ¡Diferencia > 5s! Inserta un evento de ROTURA en tabla_eventos.
-3.  LangGraph (Narrador): Detecta la alerta. Consulta el RAG buscando "Rotura de pelotón". Imprime: "¡Alarma en la pista! Katir pierde fuelle..."
-
-Ejemplo C: Insight Individual (El Coach)
-1.  Productor: Envía el paso por los 400m de nuestro atleta (Kipchoge).
-2.  Spark: Registra el tiempo en la tabla_metricas.
-3.  LangGraph (Coach): Detecta la actualización. Consulta la estrategia predefinida y la compara con la tabla de métricas. Imprime: "Bien Eliud, has pasado en 60s, vas 2s más rápido que el plan."
-
-Ejemplo D: Fin de Carrera
-1.  Productor: Se envían los tiempos de los 5000m.
-2.  Spark: Inserta el evento FIN_CARRERA.
-3.  LangGraph (Redactor Jefe): Ignora el directo. Lee TODA la tabla_metricas. Lee documentos del RAG. Redacta el informe automático final y lo guarda en Markdown[cite: 1].
-
+**Nota para Evaluadores:** Debido a que librerías críticas como `pyspark`, `pandas` y `chromadb` requieren compiladores de C++ específicos para instalarse desde código fuente en Python 3.12+, este proyecto exige el uso de **Python 3.11** mediante el Python Launcher (`py`) para garantizar una replicación exitosa y el uso de paquetes binarios pre-compilados.
