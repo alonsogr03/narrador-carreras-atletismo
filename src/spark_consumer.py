@@ -5,7 +5,7 @@ import sqlite3
 from sqlalchemy import create_engine
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, ArrayType
 from pyspark.sql.streaming.state import GroupStateTimeout
 
 # =====================================================================
@@ -50,11 +50,21 @@ esquema_salida_coach = StructType([
     StructField("tiempo_total_s", FloatType(), True)
 ])
 
-# Esquemas Rama Comentarista
-esquema_memoria_comentarista = StructType([  
+esquema_salida_comentarista = StructType([
+    StructField("tiempo_cabeza", FloatType(), True),
+    StructField("tiempo_cola", FloatType(), True),
+    StructField("dist_parcial", IntegerType(), True),
+    StructField("n_corredores", IntegerType(), True),
+    StructField("n_grupo", IntegerType(), True),
+    StructField("tipo_evento", StringType(), True),
+    StructField("composicion_grupo", ArrayType(StringType()), True)   
 ])
 
-esquema_salida_comentarista = StructType([
+# Esquemas Rama Comentarista
+esquema_memoria_comentarista = StructType([
+    StructField("grupo_en_cabeza", esquema_salida_comentarista, True),
+    StructField("ultima_distancia_m", IntegerType(), True),
+    StructField("grupos", ArrayType(esquema_salida_comentarista), True)
 ])
 
 # =====================================================================
@@ -77,6 +87,16 @@ def guardar_en_db_coach(batch_df, batch_id):
         print(f"📥 Batch {batch_id}: {len(pdf)} filas guardadas en SQLite.")
 
         
+def guardar_en_db_comentarista(batch_df, batch_id):
+    """Función que ejecuta Spark en cada micro-batch"""
+    # Convertimos el lote de Spark a Pandas
+    pdf = batch_df.toPandas()
+    
+    if not pdf.empty:
+        # Escribimos en la tabla 'coach'. 
+        # if_exists='append' hace que no borre lo anterior.
+        pdf.to_sql("tabla_comentarista", con=engine, if_exists="append", index=False)
+        print(f"📥 Batch {batch_id}: {len(pdf)} filas guardadas en SQLite para el comentarista.")
 
 def logica_coach(clave, pdfs_iter, estado):
     # Cogemos el nombre del corredor
@@ -134,28 +154,53 @@ def logica_coach(clave, pdfs_iter, estado):
 # 3. MOTOR LÓGICO 2: EL COMENTARISTA (Recorte, Gaps y Timeout)
 # =====================================================================
 def logica_comentarista(clave, pdfs_iter, estado):
-    parcial_actual = clave[0]  
+    corredores_nuevos = pd.concat(list(pdfs_iter)).sort_values("timestamp") 
     
-    # TODO 5: Gestionar el caso en el que el estado caduca por inactividad (estado.hasTimedOut)
-    # Cargar el JSON, borrar el estado (estado.remove()) y devolver un DataFrame indicando el timeout.
+    if estado.exists:
+        memoria = estado.get
+        grupo_en_cabeza = {
+            tiempo_cabeza: memoria[0][0], 
+            tiempo_cola: memoria[0][1], 
+            dist_parcial: memoria[0][2],
+            n_corredores: memoria[0][3],
+            n_grupo: memoria[0][4],
+            tipo_evento: memoria[0][5],
+            composicion_grupo: memoria[0][6]
+            }
+        ultima_distancia_m = memoria[1]
+        nombres_variables = list(grupos_en_cabeza.keys())
+        grupos = [dict(zip(nombres_variables, tupla))for tupla in memoria[2]]
+
+    else:
+        grupos_en_cabeza = {}
+        ultima_distancia_m = 0
+        grupos = []    
     
 
-    # TODO 6: Flujo normal (llegan datos). Cargar memoria anterior o crear un diccionario limpio.
-    
+    # CONDICION 1: LLEGAN LOS PRIMEROS CORREDORES
+    if ultima_distancia_m == 0:
+        corredores = {
+            tiempo_cabeza: corredores_nuevos['timestamp'].min(),
+            tiempo_cola: corredores_nuevos['timestamp'].max(),
+            dist_parcial: corredores_nuevos['distancia_metros'].min(),
+            n_corredores: len(corredores_nuevos),
+            n_grupo: 1,
+            tipo_evento: null,
+            composicion_grupo: corredores_nuevos['nombre_corredor'].unique().tolist()
+        }
+        grupos.append(corredores)
+        ultima_distancia_m = corredores.get(dist_parcial)
+        filas = []
+        campos_info = list(corredores.keys())
+        grupos_en_cabeza = tuple(grupos_en_cabeza[campo] for campo in  campos_info)ç
+        grupos = [ tuple(grupo[campo] for campo in campos_info) for grupo in grupos]
 
-    pdf_nuevos = pd.concat(list(pdfs_iter)).sort_values("timestamp")
-    nuevas_alertas = []
+    estado.update((grupos_en_cabeza, ultima_distancia_m, grupos))
 
-    # TODO 7: Procesar llegadas, ordenar la lista por tiempo, aplicar recorte a los últimos MAX_HISTORIAL_POR_PARCIAL
-    # y detectar si la diferencia entre un corredor y el anterior es > 5 segundos.
-    
 
-    # TODO 8: Control de completitud. Si ya llegaron todos (TOTAL_CORREDORES_ESPERADOS),
-    # borra el estado. Si faltan, actualiza el JSON y pon un timeout de 60 segundos.
-    
-    
-    # Retorno provisional para que no falle la sintaxis
-    return pd.DataFrame()
+
+
+    yield pd.DataFrame(filas)
 
 # =====================================================================
 # 4. ORQUESTACIÓN PRINCIPAL (BIFURCACIÓN DE FLUJOS)
@@ -166,7 +211,6 @@ def iniciar_consumidor():
     
     print("✅ Conectando a Kafka y bifurcando flujos...")
 
-    # TODO 9: Leer de Kafka en la red de Docker
     broker = os.environ.get("KAFKA_BROKER", "kafka:29092")
     
     df_raw = (
@@ -179,15 +223,12 @@ def iniciar_consumidor():
         .load()
     )
     
-
-    # TODO 10: Deserializar el JSON bruto usando selectExpr y from_json con tu esquema_kafka
     df_json = (
         df_raw.selectExpr("CAST(value AS STRING) AS json_str")
         .select(from_json(col("json_str"), esquema_kafka).alias("data"))
         .select("data.*")
     )
 
-    # TODO 11: Crear el flujo df_coach filtrando a Marta García, agrupando y aplicando applyInPandasWithState
     df_coach = (
         df_json
         .filter(col("nombre_corredor") == CORREDOR_PROTAGONISTA)
@@ -201,7 +242,6 @@ def iniciar_consumidor():
         )
     )
 
-    # TODO 12: Escribir df_coach en Parquet usando writeStream con trigger de 5 segundos
     query_coach = (
         df_coach.writeStream
         .foreachBatch(guardar_en_db_coach)
@@ -210,9 +250,26 @@ def iniciar_consumidor():
         .start()
     )
 
-    # TODO 13: (Opcional por ahora) Hacer lo mismo para df_comentarista agrupando por distancia_metros
-    
+    df_comentarista = (
+        df_json
+        .groupBy("nombre_corredor")
+        .applyInPandasWithState(
+            logica_comentarista, 
+            outputStructType=esquema_salida_comentarista,
+            stateStructType=esquema_memoria_comentarista,
+            outputMode="append",
+            timeoutConf=GroupStateTimeout.NoTimeout
+        )
+    )
 
+    query_comentarista = (
+            df_comentarista.writeStream
+            .foreachBatch(guardar_en_db_comentarista)
+            .option("checkpointLocation", "data/checkpoints/comentarista")
+            .trigger(processingTime="5 seconds")
+            .start()
+        )
+    
     print(f"🚀 [EN DIRECTO] Esperando a que arranques los motores...")
     spark.streams.awaitAnyTermination()
 
