@@ -60,6 +60,7 @@ def enviar_datos_simulados():
 
         mensaje = {
                 "schema_version": "1.0",
+                "id_competicion": str("carrera_5000m_f"),
                 "id_evento": str(split["id_evento"]),
                 "nombre_corredor": str(split["nombre_corredor"]),
                 "timestamp": float(tiempo),

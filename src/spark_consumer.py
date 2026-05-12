@@ -32,6 +32,7 @@ def crear_spark_session():
 # =====================================================================
 esquema_kafka = StructType([
     StructField("schema_version", StringType(), True),
+    StructField("id_competicion", StringType(), True),
     StructField("id_evento", StringType(), True),
     StructField("nombre_corredor", StringType(), True),
     StructField("timestamp", FloatType(), True),
@@ -154,6 +155,7 @@ def logica_coach(clave, pdfs_iter, estado):
 # 3. MOTOR LÓGICO 2: EL COMENTARISTA (Recorte, Gaps y Timeout)
 # =====================================================================
 def logica_comentarista(clave, pdfs_iter, estado):
+
     corredores_nuevos = pd.concat(list(pdfs_iter)).sort_values("timestamp") 
     
     if estado.exists:
@@ -177,7 +179,11 @@ def logica_comentarista(clave, pdfs_iter, estado):
         grupos = []    
     
 
-    # CONDICION 1: LLEGAN LOS PRIMEROS CORREDORES
+    # CONDICION 1: PRIMEROS SEGUNDOS DE LA CARRERA
+    if ultima_distancia_m == 0 and len(corredores_nuevos) == 0:
+        yield pd.DataFrame(filas)
+    
+    # CONIDICIÓN 2: PRIMEROS CORREDORES NOS LLEGAN DATOS
     if ultima_distancia_m == 0:
         corredores = {
             tiempo_cabeza: corredores_nuevos['timestamp'].min(),
@@ -192,10 +198,29 @@ def logica_comentarista(clave, pdfs_iter, estado):
         ultima_distancia_m = corredores.get(dist_parcial)
         filas = []
         campos_info = list(corredores.keys())
-        grupos_en_cabeza = tuple(grupos_en_cabeza[campo] for campo in  campos_info)ç
+        grupos_en_cabeza = tuple(grupos_en_cabeza[campo] for campo in  campos_info)
         grupos = [ tuple(grupo[campo] for campo in campos_info) for grupo in grupos]
+        estado.update((grupos_en_cabeza, ultima_distancia_m, grupos))
 
-    estado.update((grupos_en_cabeza, ultima_distancia_m, grupos))
+        yield pd.DataFrame(filas)
+
+    # CONDICIÓN 3: NOS LLEGAN CORREDORES TODOS DEL MISMO PARCIAL
+    elif len(corredores_nuevos['distancia_metros'].unique().tolist()) == 1:
+
+        # CONDICIÓN 3.1: EL PARCIAL NUEVO ES EL MISMO QUE EL ULTIMA_DISTANCIA_M
+        if ultima_distancia_m == corredores_nuevos['distancia_metros'][0] :
+            # En este caso, los nuevos corredores deberán ser asignados al grupo perteneciente. 
+
+            # Me miro los grupos de la lista de `grupos`
+
+
+
+
+
+        # CONDICIÓN 3.2
+
+
+
 
 
 
@@ -252,7 +277,7 @@ def iniciar_consumidor():
 
     df_comentarista = (
         df_json
-        .groupBy("nombre_corredor")
+        .groupBy("id_competicion")
         .applyInPandasWithState(
             logica_comentarista, 
             outputStructType=esquema_salida_comentarista,
