@@ -1,10 +1,32 @@
+# Entornos virtuales
 venv/
+env/
+.env
+
+# Python
 __pycache__/
 *.pyc
-.DS_Store
+*.pyo
+*.pyd
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Spark / Kafka temporales
 .spark-staging/
-output/processed/*
-output/aggregates/*
-!output/processed/.gitkeep
-!output/aggregates/.gitkeep
-.env
+metastore_db/
+derby.log
+
+# Datos y Persistencia (Lo que NO queremos subir)
+data/checkpoints/
+data/*.db
+data/telemetria_coach.parquet/
+
+# Logs y SO
+.DS_Store
+*.log
+
+# Excepciones: Queremos que estas carpetas suban aunque estén vacías
+# o que suban solo los archivos de configuración/estáticos.
+!data/static/
+!docs/

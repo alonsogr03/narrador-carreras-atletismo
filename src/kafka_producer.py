@@ -1,4 +1,4 @@
-import csv
+import os
 import pandas as pd
 import json
 import time
@@ -10,27 +10,27 @@ from kafka.errors import NoBrokersAvailable
 # =====================================================================
 ARCHIVO_CSV = "data/static/simulacion_carrera.csv"
 TOPIC_KAFKA = "race_events"
-FACTOR_VELOCIDAD = 0.1  # 0.1 = x10 de velocidad. 1.0 = Tiempo real.
+FACTOR_VELOCIDAD = 1  # 0.1 = x10 de velocidad. 1.0 = Tiempo real.
 
 def inicializar_productor():
-    """Conecta con el servidor de Kafka en Docker."""
+    """Conecta con el servidor de Kafka en la red interna de Docker."""
+    broker = os.environ.get("KAFKA_BROKER", "kafka:29092")
+    
     try:
         producer = KafkaProducer(
-            bootstrap_servers=['localhost:9092'],
+            bootstrap_servers=[broker],
             value_serializer=lambda x: json.dumps(x).encode('utf-8')
         )
+        print(f"✅ Productor conectado a Kafka en: {broker}")
         return producer
     except NoBrokersAvailable:
-        print("❌ ERROR: No se encuentra Kafka. ¿Has ejecutado 'docker-compose up -d'?")
+        print(f"❌ ERROR: No se encuentra Kafka en {broker}. ¿Están encendidos los contenedores?")
         exit(1)
+
 
 def enviar_datos_simulados():
     producer = inicializar_productor()
     print("✅ Productor conectado a Kafka. ¡Arrancando motores!")
-    
-    # =====================================================================
-    # 👩‍💻👨‍💻 ZONA DE PROGRAMACIÓN EN PAREJA (Vuestro turno)
-    # =====================================================================
     
     # PASO 1: Cargar el CSV'
     eventos = pd.read_csv(ARCHIVO_CSV)
@@ -55,7 +55,9 @@ def enviar_datos_simulados():
         diferencia = tiempo - tiempo_anterior
         if diferencia > 0:
             time.sleep(diferencia * FACTOR_VELOCIDAD)
+
         
+
         mensaje = {
                 "schema_version": "1.0",
                 "id_evento": str(split["id_evento"]),
@@ -64,12 +66,14 @@ def enviar_datos_simulados():
                 "distancia_metros": int(split['distancia_metros'])
             }
         
+        
         producer.send(
                 topic = TOPIC_KAFKA, 
-                #key = player_id.encode('utf-8'), 
-                value = mensaje
-                #timestamp_ms = timestamp
+                key = str(split["nombre_corredor"]).encode('utf-8'), 
+                value = mensaje,
+                timestamp_ms = int(split["tiempo_acumulado_segundos"] * 1000)
             )
+        
         print(f"Enviando: {mensaje['nombre_corredor']} - {mensaje['distancia_metros']}m")
         tiempo_anterior = tiempo
     
