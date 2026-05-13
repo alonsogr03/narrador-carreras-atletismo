@@ -8,9 +8,9 @@ from kafka.errors import NoBrokersAvailable
 # =====================================================================
 # CONFIGURACIÓN
 # =====================================================================
-ARCHIVO_CSV = "data/static/simulacion_carrera.csv"
+ARCHIVO_CSV = "data/static/simulacion_carrera_caos.csv"
 TOPIC_KAFKA = "race_events"
-FACTOR_VELOCIDAD = 1  # 0.1 = x10 de velocidad. 1.0 = Tiempo real.
+FACTOR_VELOCIDAD = 0.3  # 0.1 = x10 de velocidad. 1.0 = Tiempo real.
 
 def inicializar_productor():
     """Conecta con el servidor de Kafka en la red interna de Docker."""

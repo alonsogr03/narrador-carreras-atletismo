@@ -1,0 +1,32 @@
+[ESCENARIO: BASE DE DATOS DE RETRANSMISIÓN - 5000m FEMENINO]
+[ENFOQUE: HISTORIAS, NACIONALIDADES Y PRECEDENTES TÁCTICOS]
+
+== [PERFILES] NACIONALIDADES Y ARQUETIPOS DE LAS CORREDORAS ==
+
+- Faith KIPYEGON (Kenia - KEN): Doble campeona olímpica y plusmarquista mundial. Arquetipo: "La Depredadora Silenciosa". Acostumbra a correr escondida a rebufo de la cabeza, guardando un cambio de ritmo letal y sostenido para los últimos 400 metros.
+- Beatrice CHEBET (Kenia - KEN): Primera mujer en bajar de los 14 minutos en pista. Arquetipo: "El Martillo Pilón". Prefiere carreras de desgaste y alto ritmo desde el inicio para asfixiar a sus rivales directas.
+- Sifan HASSAN (Países Bajos - NED): Leyenda del fondo europeo. Arquetipo: "La Remontadora Implacable". Famosa por su firma táctica de correr descolgada a absoluta cola de grupo durante los primeros 3000 metros para evitar tensiones, lanzando una remontada exterior fulminante en el último tercio.
+- Gudaf TSEGAY (Etiopía - ETH): Ex plusmarquista mundial. Arquetipo: "La Atacante Frontal". Corredora muy agresiva que suele asumir el peso de tirar del grupo provocando roturas tempranas.
+- Marta GARCÍA (España - ESP): Plusmarquista nacional. Arquetipo: "La Estratega Inteligente". Atleta de gran metraje y colocación impecable; brilla corriendo agazapada marcando el paso de cerca para rematar con un esprint final muy potente.
+- Nadia BATTOCLETTI (Italia - ITA): Estrella europea. Especialista en aguantar el ritmo en finales tácticas de campeonato para colgarse medallas en los cuadros finales.
+- Karoline GROVDAL (Noruega - NOR): Veterana campeona de campo a través. Suele intentar romper las carreras imponiendo un paso constante y duro para ir soltando adversarias.
+- Ejgayehu TAYE (Etiopía - ETH) y Medina EISA (Etiopía - ETH): La élite del fondo etíope, siempre peligrosas en carreras rápidas si viajan protegidas en el pelotón principal.
+- Margaret KIPKEMBOI y Agnes NGETICH (Kenia - KEN): Escuderas de lujo de la armada keniana, capaces de tensar la cuerda en cualquier kilómetro.
+- Resto del pelotón internacional: Rose DAVIES (AUS), Shelby HOULIHAN (USA), Josette ANDREWS (USA) y Maureen KOSTER (NED). Corredoras muy consistentes que buscarán sobrevivir a las cribas iniciales para cazar diplomas o dar la sorpresa.
+
+== [PRECEDENTES] VUELCOS TÁCTICOS Y COMPORTAMIENTOS HISTÓRICOS ==
+
+1. EL PASO POR EL ECUADOR (2000m - 2500m): LA CALMA ANTES DE LA TORMENTA
+- Contexto para el narrador: Cuando el grupo cruza este parcial de forma muy compacta, la historia nos dice que el peligro de caídas y embudos se multiplica. 
+- Precedente Histórico: "La última vez que vimos a un pelotón de favoritas llegar tan agrupado al ecuador de la prueba, las atletas que viajaban cerrando el grupo aprovecharon el nerviosismo de la cabeza para ir recogiendo posiciones. En finales tensas como la de Roma 2024, cruzar el 2000m en fila de a uno fue clave para que las verdaderas candidatas guardaran fuerzas."
+
+2. EL HACHAZO LEJANO (EL ATAQUE EN EL 3700m)
+- Contexto para el narrador: Un cambio de ritmo brusco a falta de tres vueltas y media no es casualidad; es una maniobra calculada para evitar el cara a cara final.
+- Precedente Histórico: "¡Atención a este movimiento! La última vez que la carrera se rompió de forma tan violenta a falta de 1300 metros, lo vimos en el Mundial de Budapest 2023. Aquella vez, los tirones lejanos terminaron pasando factura a corredoras que gastaron demasiado pronto como Tsegay, permitiendo que fondistas mentalmente estables como Kipyegon y Chebet consolidaran la fuga hacia las medallas. Romper la prueba en el 3700m es el manual perfecto para asfixiar a las esprínteres puras."
+
+3. EL ARTE DE REMONTAR DESDE LA COLA (EL EFECTO HASSAN)
+- Contexto para el narrador: Si la base de datos muestra que atletas de renombre viajan en el grupo trasero perdiendo segundos, el comentarista debe preparar el terreno para el espectáculo.
+- Precedente Histórico: "Que nadie descarte a las atletas que viajan a cola de grupo en este parcial. La última vez que vimos a corredoras como Sifan Hassan cerrar el pelotón a estas alturas de carrera, terminaron engranando una marcha sideral por el exterior para dar caza a las líderes justo al toque de campana. En el 5000m, ir a rebufo ahorra hasta un 15% de energía aeróbica."
+
+4. EL TOQUE DE CAMPANA (ÚLTIMOS 400 METROS)
+- Contexto para el narrador: El desenlace agónico. En finales de campeonato global, los últimos 400 metros suelen correrse a ritmos impropios de una prueba de fondo, bajando de los 60 segundos por vuelta. Quien entra primera a la última curva tiene estadísticamente el 80% de probabilidades de colgarse el oro.
