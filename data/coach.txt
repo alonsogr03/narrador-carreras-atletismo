@@ -1,0 +1,77 @@
+Parcial 4100m (Real: 16.12s | Plan: 16.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 4000m (Real: 17.23s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3900m (Real: 17.13s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3800m (Real: 17.24s | Plan: 17.2s) -> Mantén el ritmo óptimo y sigue con la zancada.
+
+Parcial 3700m (Real: 17.17s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3600m (Real: 17.18s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3500m (Real: 17.14s | Plan: 17.2s) -> Mantén el ritmo óptimo y la zancada, ¡sigue así!
+
+Parcial 3400m (Real: 17.11s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3300m (Real: 17.13s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3200m (Real: 17.17s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3100m (Real: 17.15s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 3000m (Real: 17.23s | Plan: 17.2s) -> Mantén el ritmo óptimo y sigue con la zancada.
+
+Parcial 2900m (Real: 17.13s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 2800m (Real: 17.23s | Plan: 17.2s) -> Mantén el ritmo óptimo, sigue con la zancada.
+
+Parcial 2700m (Real: 17.16s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 2600m (Real: 17.07s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 2500m (Real: 17.2s | Plan: 17.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 2400m (Real: 17.08s | Plan: 17.6s) -> Ritmo demasiado elevado, afloja hasta los 17.6 segundos. Ritmo 2:50 min/km
+
+Parcial 2300m (Real: 17.24s | Plan: 17.6s) -> Ritmo demasiado elevado, afloja hasta los 17.6 segundos.
+
+Parcial 2200m (Real: 17.15s | Plan: 17.6s) -> Ritmo demasiado elevado, afloja hasta los 17.6 segundos. Ritmo 2:52 min/km
+
+Parcial 2100m (Real: 17.06s | Plan: 17.6s) -> Ritmo demasiado rápido, afloja hasta los 17.6 segundos.
+
+Parcial 2000m (Real: 17.55s | Plan: 17.6s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 1900m (Real: 35.13s | Plan: 17.6s) -> Ritmo demasiado elevado, afloja hasta los 17.6 segundos. Ritmo 2:56 min/km
+
+Parcial 1700m (Real: 17.6s | Plan: 17.6s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 1600m (Real: 17.52s | Plan: 17.6s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 1500m (Real: 18.26s | Plan: 17.6s) -> Ritmo demasiado lento, aprieta hasta los 17 segundos. Ritmo 3:00 min/km.
+
+Parcial 1400m (Real: 18.26s | Plan: 17.6s) -> Ritmo demasiado lento, aprieta hasta los 17 segundos. Ritmo 3:00 min/km
+
+Parcial 1300m (Real: 18.11s | Plan: 17.6s) -> Ritmo demasiado lento, aprieta hasta los 17 segundos. Ritmo 3:04 min/km
+
+Parcial 1200m (Real: 18.24s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 1100m (Real: 18.18s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 1000m (Real: 18.19s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 900m (Real: 18.26s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 800m (Real: 18.29s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 700m (Real: 18.16s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 600m (Real: 18.26s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 500m (Real: 18.28s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 400m (Real: 18.26s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 300m (Real: 18.22s | Plan: 18.2s) -> Ritmo óptimo, mantén la zancada.
+
+Parcial 200m (Real: 36.38s | Plan: 36.4s) -> Ritmo perfecto, ¡sigue así!. Ritmo 3:02 min/km.
