@@ -3,30 +3,87 @@
 
 == [PERFILES] NACIONALIDADES Y ARQUETIPOS DE LAS CORREDORAS ==
 
-- Faith KIPYEGON (Kenia - KEN): Doble campeona olímpica y plusmarquista mundial. Arquetipo: "La Depredadora Silenciosa". Acostumbra a correr escondida a rebufo de la cabeza, guardando un cambio de ritmo letal y sostenido para los últimos 400 metros.
-- Beatrice CHEBET (Kenia - KEN): Primera mujer en bajar de los 14 minutos en pista. Arquetipo: "El Martillo Pilón". Prefiere carreras de desgaste y alto ritmo desde el inicio para asfixiar a sus rivales directas.
-- Sifan HASSAN (Países Bajos - NED): Leyenda del fondo europeo. Arquetipo: "La Remontadora Implacable". Famosa por su firma táctica de correr descolgada a absoluta cola de grupo durante los primeros 3000 metros para evitar tensiones, lanzando una remontada exterior fulminante en el último tercio.
-- Gudaf TSEGAY (Etiopía - ETH): Ex plusmarquista mundial. Arquetipo: "La Atacante Frontal". Corredora muy agresiva que suele asumir el peso de tirar del grupo provocando roturas tempranas.
-- Marta GARCÍA (España - ESP): Plusmarquista nacional. Arquetipo: "La Estratega Inteligente". Atleta de gran metraje y colocación impecable; brilla corriendo agazapada marcando el paso de cerca para rematar con un esprint final muy potente.
-- Nadia BATTOCLETTI (Italia - ITA): Estrella europea. Especialista en aguantar el ritmo en finales tácticas de campeonato para colgarse medallas en los cuadros finales.
-- Karoline GROVDAL (Noruega - NOR): Veterana campeona de campo a través. Suele intentar romper las carreras imponiendo un paso constante y duro para ir soltando adversarias.
-- Ejgayehu TAYE (Etiopía - ETH) y Medina EISA (Etiopía - ETH): La élite del fondo etíope, siempre peligrosas en carreras rápidas si viajan protegidas en el pelotón principal.
-- Margaret KIPKEMBOI y Agnes NGETICH (Kenia - KEN): Escuderas de lujo de la armada keniana, capaces de tensar la cuerda en cualquier kilómetro.
-- Resto del pelotón internacional: Rose DAVIES (AUS), Shelby HOULIHAN (USA), Josette ANDREWS (USA) y Maureen KOSTER (NED). Corredoras muy consistentes que buscarán sobrevivir a las cribas iniciales para cazar diplomas o dar la sorpresa.
+Hellen OBIRI (KEN) - La Favorita (WL): Llega con la mejor marca mundial del año. Busca su segunda medalla tras el bronce de 2013. Es su 3ª final mundial.
+Almaz AYANA (ETH) - La Defensora: Es la actual campeona olímpica (Río) y plusmarquista de 10k. Viene de una temporada irregular por molestias, pero es medallista de oro en Pekín 2015.
+Sifan HASSAN (NED) - La Versátil: Única en doblar 1500m y 5000m en este mundial. Posee el récord de Europa. Es conocida por correr a cola y remontar (estilo "Hassan").
+Senbere TEFERI (ETH) - La Amenaza: Plata en el último mundial. Viene en una racha de 4 victorias consecutivas en la Diamond League. 
+Laura MUIR (GBR) - La Heroína Local: Debuta en final de 5000m tras brillar en 1500m. Es veterinaria de profesión. El público de Londres estará con ella. 
+Letesenbet GIDEY (ETH) - La Joven Promesa: Solo 19 años. Es su primera final absoluta. Plusmarquista mundial sub-20. Muchos la ven como la sucesora de Ayana.
+Margaret KIPKEMBOI (KEN) - La Escudera: Trabajo táctico para Kenia. 2ª final mundial consecutiva. Especialista en endurecer el ritmo a mitad de carrera.
+Eilish MCCOLGAN (GBR) - La Resiliente: Viene de una grave lesión de pie que casi la deja fuera. Hija de la leyenda Liz McColgan. Ha batido su marca personal dos veces este año.
+Sheila KIPROTICH (KEN)- La Revelación: Entró en la final por tiempos tras una serie accidentada. No tiene medallas internacionales; es la "tapada" de la armada keniana.
+Susan KRUMINS (NED) - La Veterana: 4ª final de gran campeonato. Siempre rinde mejor en finales que en series. Buscando su primer Diploma Olímpico/Mundial.
+Shannon ROWBURY (USA) - El Orgullo USA: Triple medallista mundial en 1500m. Salta al 5000m buscando la resistencia que le falta a las africanas en el sprint.
+Molly HUDDLE (USA) - La Metrónomo: Poseedora del récord nacional de EE.UU. Famosa por su capacidad de mantener ritmos altos en solitario.
+Shelby HOULIHAN (USA) - La Esprínter: Viene con la mejor marca final (últimos 200m) del equipo americano. Primera gran final mundial fuera de su continente.
+Karoline GROVDAL (NOR) - La Guerrera del Norte: Campeona europea de Cross. Única representante nórdica. Sufre en ritmos de calor pero brilla en carreras de desgaste.
+Eloise WELLINGS (AUS) - La Invitada: Entró por ranking mundial en el último suspiro. Veterana de 34 años. Es su despedida de los mundiales de pista.
 
-== [PRECEDENTES] VUELCOS TÁCTICOS Y COMPORTAMIENTOS HISTÓRICOS ==
+== [PRECEDENTES] EVENTOS DE NUESTRA CARRERA, SUS PARALELOS HISTÓRICOS Y EXPLICACIONES ==
 
-1. EL PASO POR EL ECUADOR (2000m - 2500m): LA CALMA ANTES DE LA TORMENTA
-- Contexto para el narrador: Cuando el grupo cruza este parcial de forma muy compacta, la historia nos dice que el peligro de caídas y embudos se multiplica. 
-- Precedente Histórico: "La última vez que vimos a un pelotón de favoritas llegar tan agrupado al ecuador de la prueba, las atletas que viajaban cerrando el grupo aprovecharon el nerviosismo de la cabeza para ir recogiendo posiciones. En finales tensas como la de Roma 2024, cruzar el 2000m en fila de a uno fue clave para que las verdaderas candidatas guardaran fuerzas."
+Evento: Ataque Prematuro (KM 2)
+Historia y/o explicación: Desde el Mundial de Helsinki 2005, no veíamos un ataque tan prematuro con éxito. Históricamente, el riesgo es 
+altísimo: el 70% de las atletas que intentan romper la carrera tan lejos de meta acaban perdiendo el podio en los últimos 100 metros devoradas 
+por la fatiga láctica.
 
-2. EL HACHAZO LEJANO (EL ATAQUE EN EL 3700m)
-- Contexto para el narrador: Un cambio de ritmo brusco a falta de tres vueltas y media no es casualidad; es una maniobra calculada para evitar el cara a cara final.
-- Precedente Histórico: "¡Atención a este movimiento! La última vez que la carrera se rompió de forma tan violenta a falta de 1300 metros, lo vimos en el Mundial de Budapest 2023. Aquella vez, los tirones lejanos terminaron pasando factura a corredoras que gastaron demasiado pronto como Tsegay, permitiendo que fondistas mentalmente estables como Kipyegon y Chebet consolidaran la fuga hacia las medallas. Romper la prueba en el 3700m es el manual perfecto para asfixiar a las esprínteres puras."
+Evento: Ritmo de 'Muerte' en el KM 2
+Historia y/o explicación: Cuando una líder cubre el segundo kilómetro con vueltas de 65.5s y 66.2s, lo que busca es un 'K.O.' 
+estadístico. Ese ritmo es capaz de descolgar automáticamente al 80% del pelotón, transformando una final de campeonato en una 
+carrera de eliminación directa.
 
-3. EL ARTE DE REMONTAR DESDE LA COLA (EL EFECTO HASSAN)
-- Contexto para el narrador: Si la base de datos muestra que atletas de renombre viajan en el grupo trasero perdiendo segundos, el comentarista debe preparar el terreno para el espectáculo.
-- Precedente Histórico: "Que nadie descarte a las atletas que viajan a cola de grupo en este parcial. La última vez que vimos a corredoras como Sifan Hassan cerrar el pelotón a estas alturas de carrera, terminaron engranando una marcha sideral por el exterior para dar caza a las líderes justo al toque de campana. En el 5000m, ir a rebufo ahorra hasta un 15% de energía aeróbica."
+Evento: Duelo en solitario antes del 4000m
+Historia y/o explicación: La última vez que dos atletas se quedaron solas en un hachazo antes del 4000m, el resultado fue increíble: 
+ocurrió en el Mundial de Berlín 2009. Aquella vez, el ataque de Cheruiyot y Kibet arrastró a Defar para lograr algo que solo ha pasado una vez: 
+las 3 medallistas bajaron de 14:30, rompiendo la tradición de las finales puramente tácticas.
 
-4. EL TOQUE DE CAMPANA (ÚLTIMOS 400 METROS)
-- Contexto para el narrador: El desenlace agónico. En finales de campeonato global, los últimos 400 metros suelen correrse a ritmos impropios de una prueba de fondo, bajando de los 60 segundos por vuelta. Quien entra primera a la última curva tiene estadísticamente el 80% de probabilidades de colgarse el oro.
+Evento: Ritmo Proyectado en KM 4
+Historia y/o explicación: Cruzar el kilómetro 4 en torno a los 11:49 es entrar en terreno desconocido para una final. Proyectar una marca de 
+14:30 en este punto es algo casi inaudito en la historia de los grandes campeonatos, donde el miedo táctico suele ralentizar el crono.
+
+Evento: Remontada desde la cola
+Historia y/o explicación: Ojo al movimiento desde atrás. En la era moderna, solo existe una mujer capaz de cerrar un hueco de más de 15 metros 
+en menos de 200 metros de pista: lo hizo en la Diamond League de Mónaco y es la firma táctica de las remontadas imposibles.
+
+Evento: El sprint de la 'Imbatible'
+Historia y/o explicación: Llegar a los últimos 200m con una atleta que viene de ganar casi todas sus carreras de la Diamond League ese año 
+es una sentencia. Cuando una corredora mantiene una racha de imbatibilidad en la temporada regular, su confianza en el sprint final suele 
+ser inquebrantable.
+
+Evento: La última vuelta de fuego
+Historia y/o explicación: Cerrar una final con una vuelta de 60.11 segundos es entrar en los libros de récords. Es un cambio de ritmo 
+impropio de una fondista; estamos ante la vuelta final más rápida registrada en los últimos ciclos olímpicos.
+
+Evento: Duelo Etiopía vs Kenia (Cambio de Era)
+Historia y/o explicación: Históricamente, Etiopía ha mantenido un dominio absoluto en el fondo tras ganar oros en 10.000m con 
+ventajas insultantes. Ver a una keniana derrotar a la campeona etíope en el 5000m no es solo una victoria; se interpreta como el fin de una 
+era de dominio absoluto en la distancia.
+
+Evento: Resiliencia tras el fracaso
+Historia y/o explicación: Hay un componente psicológico clave: atletas que definen su final de 1500m previa como una 'pesadilla' suelen 
+correr el 5000m con una agresividad redoblada. Conseguir el bronce tras un fracaso estrepitoso días antes es la definición de una consagración 
+mental.
+
+Evento: El hueco del grupo perseguidor pasa de 1s a 13s entre el KM 2 y el KM 4. 
+Paralelo Histórico: Final Olímpica de 
+Pekín 2008. Esta dispersión masiva es idéntica a la que provocó Tirunesh Dibaba en Pekín 2008. En aquella ocasión, un cambio de ritmo similar 
+en el tercer kilómetro estiró el grupo perseguidor de tal manera que la diferencia entre el bronce y la décima posición pasó de 1.2s a 14.5s 
+en apenas 800 metros. Es el síntoma inequívoco de que la carrera ha dejado de ser táctica para convertirse en una agonía individual por la 
+supervivencia.
+
+Evento: Remontada de 9 posiciones (de 12ª a 3ª) en los últimos 2km.
+Paralelo Histórico: Final del Mundial de Doha 2019.
+Recuperar 9 posiciones en el último tercio de una final es una gesta que no se veía desde la exhibición de Sifan Hassan en Doha 2015. 
+Históricamente, en el 90% de las finales mundiales, las atletas que pasan por el 3000m fuera del Top 8 no consiguen medalla. Hassan es la 
+excepción que rompe la regla estadística: es capaz de correr los últimos 1500m un 6% más rápido que la media del grupo de cabeza.
+
+Evento: Cambio de líder definitivo en los últimos 200-300 metros tras persecución larga.
+Paralelo Histórico: Mundial de Daegu 2011 (Vivian Cheruiyot vs Meseret Defar).
+Liderar toda la carrera para perder el oro en el 4800m es el 'síndrome de Daegu 2011'. Aquella vez, Meseret Defar lideró con puño de hierro 
+hasta que Cheruiyot le robó la cartera a falta de media vuelta. Estadísticamente, quien lanza el ataque definitivo entre el metro 4750 y el 
+4850 tiene un índice de éxito del 85%, ya que el líder suele haber agotado su reserva de glucógeno defendiendo la posición.
+
+Evento: 13 atletas en el mismo segundo hasta el paso por el 2000m.
+Paralelo Histórico: Final de Roma 2014 (Europeo).
+Mantener a 13 atletas en una diferencia de 1.05 segundos tras dos kilómetros es un hito de densidad competitiva que solo hemos visto 
+recientemente en la final de Roma 2024. Este comportamiento suele preceder a una caída masiva o a un ataque violento, ya que la tensión por 
+el espacio en la calle 1 se vuelve insoportable para las favoritas.
