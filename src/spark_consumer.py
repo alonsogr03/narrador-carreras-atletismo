@@ -12,8 +12,8 @@ from pyspark.sql.streaming.state import GroupStateTimeout
 KAFKA_TOPIC = "race_events"
 KAFKA_BROKER = "localhost:9092"
 
-CORREDOR_PROTAGONISTA = "Marta GARCÍA"
-TOTAL_CORREDORES_ESPERADOS = 16  
+CORREDOR_PROTAGONISTA = "Hellen OBIRI"
+TOTAL_CORREDORES_ESPERADOS = 15  
 GAP_SEGUNDOS = 5.0
 
 def crear_spark_session():
