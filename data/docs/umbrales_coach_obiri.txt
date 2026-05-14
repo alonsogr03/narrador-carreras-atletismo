@@ -1,39 +1,24 @@
 SECCIÓN 1 (100m - 1200m): FASE DE COLOCACIÓN Y AHORRO
-Contexto del Coach: Obiri debe viajar "escondida" en el primer tercio. El objetivo es minimizar el gasto de glucógeno y evitar los flancos exteriores.
-Parámetros:
 Tiempo Objetivo 100m: 18.2s
 Umbral INFERIOR (Alerta Roja): < 17.5s → Consecuencia: Gasto anaeróbico prematuro. Riesgo de llegar sin 'punch' al último mil.
 Umbral SUPERIOR (Alerta Amarilla): > 18.5s → Consecuencia: Pelotón demasiado lento; riesgo de tropezones por densidad de atletas.
-Estado de Carrera: Pelotón compacto. Obiri debe ir en posiciones 4ª a 7ª.
 
 SECCIÓN 2 (1300m - 2400m): TRANSICIÓN AL RITMO DE CRUCERO
-Contexto del Coach: Fase de endurecimiento. Es donde las etíopes suelen empezar a "limpiar" el grupo. Obiri debe subir un punto la intensidad sin liderar.
-Parámetros:
 Tiempo Objetivo 100m: 17.6s
 Umbral INFERIOR (Aflojar): < 17.1s → Consecuencia: Se está dejando arrastrar por un ataque suicida ajeno.
 Umbral SUPERIOR (Apretarse): > 17.9s → Consecuencia: Pérdida de contacto con el grupo de cabeza (Corte táctico).
-Estado de Carrera: Estiramiento del pelotón. Vigilancia estrecha sobre Almaz Ayana.
 
 SECCIÓN 3 (2500m - 4000m): RESISTENCIA AL "HACHAZO" DE AYANA
-Contexto del Coach: Esta es la zona crítica de nuestra carrera simulada. Ayana lanza su ataque largo. Obiri debe ser una "sombra", sufriendo pero sin ceder más de 2 metros.
-Parámetros:
 Tiempo Objetivo 100m: 17.2s
 Umbral INFERIOR (Control de Daños): < 16.8s → Consecuencia: Riesgo de colapso láctico antes de la campana.
 Umbral SUPERIOR (Peligro de Oro): > 17.5s → Consecuencia: El hueco con Ayana se vuelve insalvable (más de 10 metros).
-Estado de Carrera: Duelo en solitario (Mano a mano). El resto del mundo desaparece.
 
 SECCIÓN 4 (4100m - 4600m): PREPARACIÓN DEL ZARPAZO
-Contexto del Coach: Obiri empieza a recortar la distancia con Ayana. Se reduce el tiempo de contacto. Es una fase de "caza" psicológica.
-Parámetros:
 Tiempo Objetivo 100m: 16.2s
 Umbral INFERIOR (Vaciado Anticipado): < 15.8s → Consecuencia: Puede quedarse sin piernas para los últimos 100m de meta.
 Umbral SUPERIOR (Falta de Ambición): > 16.5s → Consecuencia: Ayana se recupera y gana confianza para el sprint.
-Estado de Carrera: Caza activa. Obiri se sitúa a rebufo (distancia de doblaje inminente sobre atletas de cola).
 
 SECCIÓN 5 (4700m - 5000m): EXPLOSIÓN Y CIERRE DE ORO
-Contexto del Coach: Vaciado total. Obiri activa su pasado de milquinientista. No hay umbral inferior, solo potencia máxima.
-Parámetros:
 Tiempo Objetivo 100m: 15.1s
-Ritmo Objetivo: 2:31 min/km (Ritmo de sprint de 800m).
+Umbral INFERIOR (Posibilidad de oro y NR): < 14.9s → Consecuencia: Puede conseguir el oro con mucha ventaja e incluso batir el récord de su país.
 Umbral SUPERIOR (Alerta de Plata): > 16.0s → Consecuencia: Ayana o una remontada de Hassan por fuera podrían quitarle el oro.
-Estado de Carrera: Liderato en solitario tras adelantamiento. Sprint final agónico.
