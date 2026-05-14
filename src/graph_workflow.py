@@ -123,6 +123,7 @@ def nodo_generar_mensaje(state: CoachState):
     corredor = metricas.get("corredor", "Marta GARCÍA")
     distancia = metricas.get("distancia_m", 0)
     parcial = metricas.get("tiempo_parcial_s", 0.0)
+    ritmo = metricas.get("ritmo_parcial", 0.0)
 
     # Prompt profesional con nomenclatura técnica inmersiva
     sys_msg = SystemMessage(content=f"""Eres el entrenador de pista de {corredor} en la final de 5000m. 
@@ -141,7 +142,7 @@ REGLAS PARA LA [Instrucción técnica]:
 DATOS EN DIRECTO (Telemetría actual):
 - Distancia: {distancia}m
 - Parcial real: {parcial}s
-- 
+- Ritmo: {ritmo}km/h
 
 DATOS DEL PLAN TÁCTICO (Contexto Documental):
 {contexto_rag}
